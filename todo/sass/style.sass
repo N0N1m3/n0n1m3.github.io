@@ -1,0 +1,95 @@
+* 
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: sans-serif
+
+body, html
+    height: 100%
+    background: linear-gradient(45deg, #46eeaa, #2cbfc7) no-repeat
+
+.container
+    width: 1000px
+    margin: 0 auto
+    display: flex
+    justify-content: center
+
+.add
+    margin-top: 150px
+    font-size: 0
+    border: 1px solid black
+    &__input 
+        line-height: 20px
+        padding: 7px
+        height: 40px
+        width: 450px
+        outline: none
+        border: none
+        
+
+    &__btn
+        padding: 7px
+        height: 40px
+        width: 50px
+        background: white
+        border: none
+        cursor: pointer
+        &:focus,&:active
+            outline: none
+
+.list
+    margin-top: 50px
+
+    &__ul
+        list-style: none
+    &__li
+        height: 40px
+        width: 500px
+        background: linear-gradient(45deg, #ff7c6e, #f5317f) no-repeat
+        border: 1px solid trasparent
+        border-radius: 10px
+        color: white
+        padding: 10px
+        margin-bottom: 10px
+
+.important
+    color: red
+
+$var1: #ff7c6e
+$var2: #dddddd
+
+input[type=checkbox] 
+	opacity: 0
+	position: absolute
+	+ label:before 
+		content: ''
+		background: $var1
+		border-radius: 5px
+		border: 2px solid $var2
+		display: inline-block
+		vertical-align: middle
+		width: 10px
+		height: 10px
+		padding: 2px
+		margin-right: 10px
+		text-align: center
+	
+	&:checked + label:before 
+		content: ""
+		display: inline-block
+		width: 1px
+		height: 5px
+		border: solid blue
+		border-width: 0 3px 3px 0
+		transform: rotate(45deg)
+		-webkit-transform: rotate(45deg)
+		-ms-transform: rotate(45deg)
+		border-radius: 0
+		margin: 0 15px 5px 5px
+	
+
+input[type=checkbox], label 
+	display: inline-block
+	vertical-align: middle
+	cursor: pointer
+
